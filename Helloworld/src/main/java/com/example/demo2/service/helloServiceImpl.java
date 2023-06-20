@@ -8,4 +8,8 @@ public class helloServiceImpl {
     public String hello(){
         return "Hello World!";
     }
+
+    public int add(Integer num){
+        return num*2;
+    }
 }
