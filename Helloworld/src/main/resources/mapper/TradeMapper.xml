@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo2.mapper.TradeMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.demo2.entity.Trade">
+            <id property="tradeId" column="tradeId" jdbcType="INTEGER"/>
+            <result property="clientName" column="ClientName" jdbcType="VARCHAR"/>
+            <result property="ticker" column="Ticker" jdbcType="VARCHAR"/>
+            <result property="RIC" column="RIC" jdbcType="VARCHAR"/>
+            <result property="productId" column="productId" jdbcType="INTEGER"/>
+            <result property="insert_id" column="insert_id" jdbcType="VARCHAR"/>
+            <result property="insert_ts" column="insert_ts" jdbcType="TIMESTAMP"/>
+            <result property="update_id" column="update_id" jdbcType="VARCHAR"/>
+            <result property="update_ts" column="update_ts" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        tradeId,ClientName,Ticker,
+        RIC,productId,insert_id,
+        insert_ts,update_id,update_ts
+    </sql>
+</mapper>

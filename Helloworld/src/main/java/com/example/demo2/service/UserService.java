@@ -7,12 +7,12 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import java.text.ParseException;
 
 /**
-* @author 奥特曼
+* @author 张甲汶
 * @description 针对表【user】的数据库操作Service
 * @createDate 2023-06-20 22:04:34
 */
 public interface UserService extends IService<User> {
-   Result showUser(Integer id);
+   User showUser(Integer id);
    Result deleteUser(Integer id);
 
    Result updateUser(Integer id,String name,String email,String institute) throws ParseException;

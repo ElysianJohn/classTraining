@@ -18,7 +18,7 @@ import java.util.Date;
 
 
 /**
-* @author 奥特曼
+* @author 张甲汶
 * @description 针对表【user】的数据库操作Service实现
 * @createDate 2023-06-20 22:04:34
 */
@@ -28,13 +28,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
     @Autowired
     UserMapper userMapper;
-    public Result showUser(Integer id){
+    public User showUser(Integer id){
         User user = userMapper.selectById(id);
-        if(user==null){
-            return Result.error();
-        }
-        return Result.ok()
-                .data("User",user);
+
+        return user;
     }
 
    public Result deleteUser(Integer id){
